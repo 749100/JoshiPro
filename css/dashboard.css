@@ -266,60 +266,73 @@ body {
     color: #2563eb;
 }
 /* ==========================================================================
-   📲 JOSHIPRO MOBILE RESPONSIVE PATCH
+   📲 JOSHIPRO MOBILE RESPONSIVE DRAWED ARCHITECTURE
    ========================================================================== */
 @media screen and (max-width: 768px) {
 
-    /* Stacks the layout vertically instead of forcing it side-by-side */
-    .dashboard-container {
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 10px !important;
+    /* Unhide the mobile menu button on smartphone screens */
+    .mobile-toggle-btn {
+        display: block !important;
+        background: none;
+        border: none;
+        color: #2d3748;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-right: 10px;
     }
 
-    /* Moves the sidebar to the top of the mobile screen */
+    /* 🎯 Hides the sidebar block out of view by default on mobile layouts */
     .sidebar {
+        display: none !important;
         width: 100% !important;
         position: relative !important;
         height: auto !important;
         margin-bottom: 20px !important;
         padding: 15px !important;
-        box-shadow: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
     }
 
-    /* Rearranges menu items into clean, clickable rows */
+    /* 🎯 This active class makes it pop up dynamically when clicked */
+    .sidebar.mobile-open {
+        display: block !important;
+    }
+
+    /* Stack links row by row cleanly */
     .sidebar-menu {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-direction: column !important;
         gap: 8px !important;
     }
 
     .menu-item {
-        flex: 1 1 calc(50% - 8px) !important;
+        width: 100% !important;
         text-align: center !important;
-        padding: 10px !important;
+        padding: 12px !important;
     }
 
-    /* Removes the huge desktop margins so your content doesn't get pushed off-screen */
     .main-content {
         margin-left: 0 !important;
         width: 100% !important;
-        padding: 0 !important;
+        padding: 10px !important;
     }
 
     .dashboard-title {
-        margin-left: 15px !important;
+        margin-left: 0 !important;
     }
 
-    /* Stacks application boxes, metrics, and cards vertically */
     .dashboard-grid,
-    .stats-container,
-    .notifications-wrapper-feed div,
-    #notificationsContainer>div {
+    .stats-container {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
         gap: 15px !important;
-        align-items: flex-start !important;
+    }
+}
+
+/* Base style rule fallback to hide the hamburger button when viewing on Desktop monitors */
+@media screen and (min-width: 769px) {
+    .mobile-toggle-btn {
+        display: none !important;
     }
 }

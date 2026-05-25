@@ -15,3 +15,25 @@ firebase.initializeApp(firebaseConfig);
 // Set up references for your login.js and register.js files to share
 const auth = firebase.auth();
 const database = firebase.database();
+
+// ==========================================================================
+// 📱 GLOBAL JOSHIPRO MOBILE SIDEBAR DRAWER TOGGLE UTILITY
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("mobileMenuToggleBtn");
+    const sidebarContainer = document.querySelector(".sidebar");
+
+    if (toggleButton && sidebarContainer) {
+        toggleButton.addEventListener("click", (event) => {
+            event.stopPropagation(); // Stops immediate closing actions
+            sidebarContainer.classList.toggle("mobile-open");
+        });
+
+        // Smart Feature: Click anywhere on the dashboard content panel to auto-close the menu drawer!
+        document.addEventListener("click", (event) => {
+            if (!sidebarContainer.contains(event.target) && event.target !== toggleButton) {
+                sidebarContainer.classList.remove("mobile-open");
+            }
+        });
+    }
+});
