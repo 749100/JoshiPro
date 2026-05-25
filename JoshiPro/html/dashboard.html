@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | JoshiPro</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <style>
+        /* Essential Z-Index fix to make sure the header components are clickable */
+        .dashboard-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .profile-avatar-link {
+            display: inline-block;
+            cursor: pointer;
+            z-index: 1001;
+            text-decoration: none;
+        }
+
+        .avatar-container {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #0066cc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f2f3;
+            overflow: hidden;
+        }
+
+        .avatar-container:hover {
+            transform: scale(1.05);
+        }
+
+        .avatar-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Shift container down so it doesn't hide behind the top fixed header */
+        .dashboard-container {
+            margin-top: 70px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <span class="dashboard-title"
+                style="font-weight: 800; color: #2d3748; align-items: center; margin-left: 260px;">JOSHIPRO</span>
+        </div>
+        <div class="header-right">
+            <a href="profile.html" class="profile-avatar-link">
+                <div class="avatar-container">
+                    <img class="avatar-image" id="topHeaderAvatar" src="../images/logo.jpeg"
+                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%230066cc\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z\'/></svg>'"
+                        alt="Profile">
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-logo">JoshiPro</div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">Dashboard</a>
+                <a href="findJobs.html" class="menu-item">Find Jobs</a>
+                <a href="postJob.html" class="menu-item">Post a Job</a>
+                <a href="applications.html" class="menu-item">Applications</a>
+                <a href="notifications.html" class="menu-item">Notifications</a>
+            </nav>
+            <button id="sidebarLogoutBtn" class="logout-btn">Log Out</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <div>
+                    <h1>Welcome Back!</h1>
+                    <p>Here is what's happening with your job search today.</p>
+                </div>
+                <div class="user-avatar" style="display: none;">Loading...</div>
+            </header>
+
+            <section class="metrics-grid">
+                <div class="card">
+                    <span id="applicationsSent">#</span>
+                    <p>Applications Sent</p>
+                </div>
+                <div class="card">
+                    <span id="interviewsScheduled">0</span>
+                    <p>Interviews Scheduled</p>
+                </div>
+                <div class="card">
+                    <span id="offersReceived">0</span>
+                    <p>Offers Received</p>
+                </div>
+                <div class="card">
+                    <span id="profileViews">0</span>
+                    <p>Profile Views</p>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <h3>Recent Applications</h3>
+                <table class="jobs-table">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Date Applied</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

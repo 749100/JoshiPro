@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Find Jobs Card Marketplace Layout Vectors
+   ========================================================================== */
+
+.search-filter-section {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #e2e8f0;
+}
+
+#jobSearchInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#jobSearchInput:focus {
+    border-color: #0066cc;
+}
+
+.search-action-btn {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-action-btn:hover {
+    background-color: #0052a3;
+}
+
+/* Grid Matrix Layout */
+.jobs-marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Professional Modern Job Card Component Structure */
+.job-marketplace-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-marketplace-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.job-card-header h2 {
+    font-size: 18px;
+    color: #1e293b;
+    margin: 0 0 4px 0;
+}
+
+.job-card-company {
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.job-card-details-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.job-meta-tag {
+    background: #f1f5f9;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.job-card-description {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.apply-action-trigger-btn {
+    width: 100%;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.apply-action-trigger-btn:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+    border-color: #0066cc;
+}
+
+.loading-placeholder-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+    font-style: italic;
+}

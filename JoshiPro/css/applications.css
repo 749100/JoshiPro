@@ -1,0 +1,23 @@
+.table-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Status styling classes */
+.status-badge.applied {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.status-badge.reviewing {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-badge.interview {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Applications | JoshiPro</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/applications.css">
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+        <div class="header-left">
+            <span class="dashboard-title" style="font-weight: 800; color: #2d3748; margin-left: 260px;">JOSHIPRO</span>
+        </div>
+        <div class="header-right">
+            <a href="profile.html" class="profile-avatar-link">
+                <div class="avatar-container">
+                    <img class="avatar-image" id="topHeaderAvatar" src="../images/logo.jpeg"
+                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%230066cc\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z\'/></svg>'"
+                        alt="Profile">
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">JoshiPro</div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item">Dashboard</a>
+                <a href="findJobs.html" class="menu-item">Find Jobs</a>
+                <a href="postJob.html" class="menu-item">Post a Job</a>
+                <a href="applications.html" class="menu-item active">Applications</a>
+                <a href="notifications.html" class="menu-item">Notifications</a>
+            </nav>
+            <button id="sidebarLogoutBtn" class="logout-btn">Log Out</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <div>
+                    <h1>Application History</h1>
+                    <p>Track the real-time status and progress of all your submitted job applications.</p>
+                </div>
+            </header>
+
+            <section class="table-section">
+                <table class="jobs-table" id="applicationsHistoryTable">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Date Applied</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" style="text-align: center; color: #64748b;">Syncing application data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/applications.js"></script>
+</body>
+
+</html>

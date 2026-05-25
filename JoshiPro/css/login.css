@@ -1,0 +1,166 @@
+/* ==========================================================================
+   1. Reset & Core Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+   background-image: url('../images/logo.jpg');
+   background-size: cover;
+   background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================================================
+   2. Main Layout (Card)
+   ========================================================================== */
+.card {
+    background: #ad8913;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card h1 {
+    color: #1c40df;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.card h2 {
+    color: #1c40df;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   3. Form Elements (Inputs & Labels)
+   ========================================================================== */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #080808;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.form-group p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #01050a;
+}
+
+/* ==========================================================================
+   4. Buttons & Anchor Tags
+   ========================================================================== */
+/* Generic Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 12px;
+}
+
+button:last-child {
+    margin-bottom: 0;
+}
+
+/* Links inside buttons or text */
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    /* Makes the entire button clickable when wrapped around links */
+    width: 100%;
+}
+
+/* Primary Actions (Login / Register Submit) */
+.btn-login,
+.btn-register {
+    background-color: #1839ca;
+    color: #04030a;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background-color: #6b6d04;
+    transform: translateY(-1px);
+}
+
+/* Secondary Actions (Navigation / Links) */
+.btn-forgot {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-forgot:hover {
+    background-color: #edf2f7;
+    color: #070808;
+}
+
+/* Inline text links (e.g., "Login here") */
+p a {
+    display: inline;
+    color: #041046;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   5. Animations
+   ========================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

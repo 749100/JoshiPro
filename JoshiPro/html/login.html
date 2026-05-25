@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOSHIPRO</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+    <div class="card">
+        <h1>JOSHIPRO</h1>
+        <h2>Welcome back!</h2>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="txtEmail" placeholder="Enter Email" name="email" required> 
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="txtPassword" placeholder="Enter Password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button class="btn-login" id="btnLogin">Login</button>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+            <p class="forgot-password"><a href="reset.html">Forgot Password?</a></p>
+        </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

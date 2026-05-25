@@ -1,0 +1,179 @@
+/* ==========================================================================
+   JoshiPro Profile Workspace & Realtime Progress Module
+   ========================================================================== */
+
+.progress-section-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+}
+
+.progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.progress-title {
+    color: #1e293b;
+}
+
+.progress-percent {
+    color: #0066cc;
+}
+
+.progress-track-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f1f5f9;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill-layer {
+    width: 0%;
+    /* Controls updated via Javascript dynamically */
+    height: 100%;
+    background-color: #0066cc;
+    border-radius: 999px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-tip-text {
+    font-size: 13px;
+    color: #64748b;
+    margin: 10px 0 0 0;
+    font-style: italic;
+}
+
+/* Layout Split Structure */
+.profile-workspace-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+}
+
+.profile-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: #1e293b;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* Avatar Box Items */
+.avatar-upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar-preview-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-preview-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#imageFileInputPicker {
+    display: none;
+    /* Hide standard ugly file picker input */
+}
+
+.custom-file-upload-btn {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-file-upload-btn:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.file-spec-advice {
+    font-size: 11px;
+    color: #94a3b8;
+    margin: 12px 0 0 0;
+}
+
+/* Form Management Details Grid Side */
+.profile-details-box .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.profile-details-box label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.profile-details-box input,
+.profile-details-box textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.profile-details-box input:focus,
+.profile-details-box textarea:focus {
+    border-color: #0066cc;
+}
+
+.save-profile-action-btn {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.save-profile-action-btn:hover {
+    background-color: #0052a3;
+}

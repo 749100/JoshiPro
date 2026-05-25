@@ -1,0 +1,128 @@
+/* ==========================================================================
+   JoshiPro Core Notifications Hub Interface Layout Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/logo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.notifications-layout-wrapper {
+    width: 100%;
+    max-width: 850px;
+    padding: 20px;
+}
+
+.notifications-card-panel {
+    background: #ada318;
+    /* Custom layout theme parameter matching your panel designs */
+    border-radius: 12px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.notifications-header-block {
+    margin-bottom: 24px;
+    border-bottom: 2px solid rgba(0, 102, 204, 0.2);
+    padding-bottom: 16px;
+}
+
+.notifications-header-block h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0066cc;
+    margin-bottom: 6px;
+}
+
+.notifications-header-block p {
+    font-size: 14px;
+    color: #030508;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.notifications-footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.return-dashboard-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.return-dashboard-btn:hover {
+    color: #004d99;
+}
+
+/* ==========================================================================
+   Toast Slide Alert Layout System (For Live Cross-Page Popups)
+   ========================================================================== */
+.toast-notification-master-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.toast-message-item {
+    pointer-events: auto;
+    width: 340px;
+    background: #1e293b;
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(120%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-message-item.show-toast {
+    transform: translateX(0);
+}
+
+.toast-message-item.success-state {
+    border-left: 5px solid #10b981;
+}
+
+.toast-message-item.error-state {
+    border-left: 5px solid #ef4444;
+}
+
+.toast-message-item.info-state {
+    border-left: 5px solid #0066cc;
+}
+
+.toast-title-line {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.toast-body-text {
+    font-size: 13px;
+    color: #cbd5e1;
+}

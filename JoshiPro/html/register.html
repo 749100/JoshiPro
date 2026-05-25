@@ -1,0 +1,63 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JOSHIPRO - Register</title>
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+    </head>
+
+    <body>
+
+        <div class="card">
+            <h1>JOSHIPRO</h1>
+            <h2>Create Account</h2>
+        
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" name="fullname" id="txtFullName" placeholder="Enter your Full Name" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="id">ID Number</label>
+                <input type="text" name="id" id="txtId" placeholder="Enter your ID Number" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="txtEmail" placeholder="Enter your Email" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="phone">Phone Number </label>
+                <input type="tel" name="phone" id="txtPhone" placeholder="Enter your Phone Number" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="txtPassword" placeholder="Enter your Password" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" name="confirmpassword" id="txtConfirmPassword" placeholder="Confirm your Password"
+                    required>
+            </div>
+        
+            <div class="form-group">
+                <button class="btn-register" id="btnRegister">Register</button>
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div> ```
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database-compat.js"></script>
+        <script src="../js/config.js"></script>
+        <script src="../js/register.js"></script>
+
+    </body>
+
+    </html>
