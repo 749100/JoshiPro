@@ -65,6 +65,7 @@
 <body>
     <header class="dashboard-header">
         <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">☰</button>
             <span class="dashboard-title"
                 style="font-weight: 800; color: #2d3748; align-items: center; margin-left: 260px;">JOSHIPRO</span>
         </div>
@@ -79,16 +80,15 @@
         </div>
     </header>
 
+        <div class="dashboard-container">
         <aside class="sidebar">
             <div class="sidebar-logo">JoshiPro</div>
-            <button class="menu-toggle">☰</button>
-            <nav class="nav">
-                <a href="#" class="nav-item">Dashboard</a>
-                <a href="#" class="nav-item">Find Jobs</a>
-                <a href="#" class="nav-item">Post a Job</a>
-                <a href="#" class="nav-item">Applications</a>
-                <a href="#" class="nav-item">Notifications</a>
-                <a href="#" class="nav-item">Settings</a>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item">Dashboard</a>
+                <a href="findJobs.html" class="menu-item active">Find Jobs</a>
+                <a href="postJob.html" class="menu-item">Post a Job</a>
+                <a href="applications.html" class="menu-item">Applications</a>
+                <a href="notifications.html" class="menu-item">Notifications</a>
             </nav>
             <button id="sidebarLogoutBtn" class="logout-btn">Log Out</button>
         </aside>
